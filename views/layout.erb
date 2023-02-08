@@ -6,13 +6,17 @@
     <header>
     <h1>NEWS TODAY: </h1>
     </header>
+
+    <% @news["articles"].each do |article| %>
+
       <div class ="news-item">
-        <ul> This is the news story : <%= @news["articles"].first["title"] %> </ul>
-        <ul> This is the description: <%= @news["articles"].first["description"] %></ul>
-        <ul>
-        This is the image: <img src= "<%= @news["articles"].first["urlToImage"] %>">
-        </ul>
-        <ul> Publication date: <%= @news["articles"].first["publishedAt"][0...10] %></ul>
+        <ul class="story"> <b>News story: </b> <%= article["title"] %> </ul>
+        <ul class="description"> <b>Description:</b> <%= article["description"] %></ul>
+        <ul class="author"><b> Author:</b> <%= article["author"] %></ul>
+        <ul class="source"> <b>Publisher:</b> <%= article["source"]["name"] %></ul>
+        <ul> <img class="image" src= "<%= article["urlToImage"] %>"> </ul>
+        <ul class="pub-date"> <b>Publication date:</b> <%= article["publishedAt"][0...10] %></ul>
       </div>
+    <% end %>
   </body>
 </html>
