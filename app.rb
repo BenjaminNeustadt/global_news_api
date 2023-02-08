@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require './lib/news_search.rb'
 
 class Application < Sinatra::Base
 
@@ -8,7 +9,8 @@ class Application < Sinatra::Base
   end
 
   get '/' do
-    "Hello sir"
+    @news = News.new.search
+    erb :layout
   end
 
 end
