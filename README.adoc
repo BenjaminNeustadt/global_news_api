@@ -1,0 +1,12 @@
+= Global news api
+
+User can input a topic and have a return of news stories matching the request.
+
+This was an exercise in trying to have something working in as quickly a time as possible.
+
+There are currently no tests.
+
+In order to use it, a personal API key must be set up and placed in a dotenv file in the local.
+
+The place to retrieve the key is here:
+https://newsapi.org/
