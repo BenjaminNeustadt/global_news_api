@@ -6,6 +6,11 @@
     <header>
     <h1>NEWS TODAY: </h1>
     </header>
+    <div class= "input-form">
+      <form action="/" method="get">
+      <input class="input-field" type="text" name="topic">
+      <input class="button" type="submit" value="Search a topic">
+    </div>
 
     <% @news["articles"].each do |article| %>
 

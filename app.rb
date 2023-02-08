@@ -9,7 +9,8 @@ class Application < Sinatra::Base
   end
 
   get '/' do
-    @news = News.new("balloon").search
+    @query = params[:topic] || "recent news"
+    @news = News.new(@query).search
     erb :layout
   end
 
