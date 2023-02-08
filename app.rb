@@ -9,7 +9,7 @@ class Application < Sinatra::Base
   end
 
   get '/' do
-    @news = News.new.search
+    @news = News.new("balloon").search
     erb :layout
   end
 

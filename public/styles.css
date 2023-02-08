@@ -1,0 +1,9 @@
+body {
+  background-color: grey;
+  color: black;
+}
+
+.news-item {
+  border-style: solid ;
+  border-color: white;
+}

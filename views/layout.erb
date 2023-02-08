@@ -1,0 +1,18 @@
+<html>
+  <head>
+  <link href="<%= url('/styles.css') %>" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+    <h1>NEWS TODAY: </h1>
+    </header>
+      <div class ="news-item">
+        <ul> This is the news story : <%= @news["articles"].first["title"] %> </ul>
+        <ul> This is the description: <%= @news["articles"].first["description"] %></ul>
+        <ul>
+        This is the image: <img src= "<%= @news["articles"].first["urlToImage"] %>">
+        </ul>
+        <ul> Publication date: <%= @news["articles"].first["publishedAt"][0...10] %></ul>
+      </div>
+  </body>
+</html>
